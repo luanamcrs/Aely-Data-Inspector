@@ -1,3 +1,4 @@
+<img width="1897" height="910" alt="Captura de tela 2026-07-07 224504" src="https://github.com/user-attachments/assets/5cd14099-142a-4c52-b8f5-5faf7cf73091" />
 # 📊 Aely Data Inspector
 
 <p align="center">
@@ -25,17 +26,21 @@ Analise arquivos CSV e Excel, identifique inconsistências automaticamente, visu
 
 # 📸 Demonstração
 
+## Home
+
+![Home](screenshots/home.png)
+
 ## Dashboard
 
 ![Dashboard](screenshots/dashboard.png)
 
 ## Análise de Problemas
 
-![Problemas](screenshots/problems.png)
+![Problemas](screenshots/IdentificaErros.png)
 
 ## Relatório Executivo
 
-![Relatório](screenshots/report.png)
+![Relatório](screenshots/ia.png)
 
 ---
 
