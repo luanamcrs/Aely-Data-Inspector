@@ -1,154 +1,175 @@
-# Aely Data Inspector 📊
+# 📊 Aely Data Inspector
 
-> Plataforma inteligente para análise de qualidade de dados, identificação de inconsistências e geração de diagnósticos executivos utilizando Python, Streamlit e Inteligência Artificial.
+<p align="center">
 
-![Aely Data Inspector](screenshots/dashboard.png)
+**Plataforma inteligente para análise de qualidade de dados com Python, Streamlit e Inteligência Artificial.**
 
----
+Analise arquivos CSV e Excel, identifique inconsistências automaticamente, visualize indicadores de qualidade e gere diagnósticos executivos em poucos segundos.
 
-## 📌 Sobre o projeto
-
-O **Aely Data Inspector** é uma aplicação desenvolvida para automatizar uma das etapas mais importantes em projetos de dados: a **análise da qualidade das informações antes da tomada de decisão**.
-
-Bases de dados reais frequentemente possuem problemas como valores ausentes, registros duplicados e inconsistências de preenchimento. Esses problemas podem comprometer análises, indicadores e decisões estratégicas.
-
-O Aely foi criado para facilitar esse processo, permitindo que usuários carreguem uma base de dados, visualizem indicadores de qualidade, encontrem problemas automaticamente e recebam um diagnóstico executivo.
+</p>
 
 ---
 
-# 🚀 Funcionalidades
+<p align="center">
 
-## 📂 Upload de dados
+![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas)
+![Plotly](https://img.shields.io/badge/Plotly-Interactive%20Charts-3F4F75?style=for-the-badge&logo=plotly)
+![Gemini](https://img.shields.io/badge/Google-Gemini-blue?style=for-the-badge&logo=google)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-Permite carregar arquivos:
+</p>
+
+---
+
+# 📸 Demonstração
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+## Análise de Problemas
+
+![Problemas](screenshots/problems.png)
+
+## Relatório Executivo
+
+![Relatório](screenshots/report.png)
+
+---
+
+# 🎯 Sobre o projeto
+
+O **Aely Data Inspector** foi desenvolvido para automatizar uma das etapas mais importantes de qualquer projeto de dados: a **avaliação da qualidade das informações antes da tomada de decisão**.
+
+Bases de dados reais frequentemente apresentam problemas como:
+
+- valores ausentes;
+- registros duplicados;
+- inconsistências de preenchimento;
+- diferentes tipos de dados;
+- informações incompletas.
+
+Essas falhas comprometem dashboards, modelos analíticos e decisões de negócio.
+
+O objetivo do projeto é fornecer uma ferramenta simples, intuitiva e automatizada para identificar esses problemas e gerar uma visão executiva da qualidade da base.
+
+---
+
+# ✨ Funcionalidades
+
+## 📂 Upload de arquivos
+
+Suporte para:
 
 - CSV
 - Excel (.xlsx)
 
-Após o carregamento, a aplicação realiza uma análise inicial da estrutura da base.
+---
+
+## 📊 Dashboard de Data Quality
+
+Após o upload são apresentados indicadores como:
+
+- Total de linhas
+- Total de colunas
+- Total de células
+- Score de qualidade
+- Valores ausentes
+- Registros duplicados
 
 ---
 
-## 🔎 Análise de Data Quality
+## 🔎 Identificação automática de problemas
 
 O sistema identifica automaticamente:
 
-✅ Valores ausentes  
-✅ Registros duplicados  
-✅ Inconsistências em dados textuais  
-✅ Distribuição dos tipos de dados  
-✅ Indicadores gerais da qualidade da base  
+- Valores ausentes
+- Registros duplicados
+- Inconsistências em dados textuais
+- Distribuição dos tipos de dados
+- Problemas encontrados por coluna
+
+Os resultados são exibidos em uma tabela organizada para facilitar a inspeção.
 
 ---
 
-## 📊 Dashboard de qualidade
+## 📈 Visualizações
 
-A aplicação apresenta:
+O dashboard apresenta gráficos interativos utilizando Plotly.
 
-- Quantidade de registros
-- Quantidade de colunas
-- Total de células analisadas
-- Score de qualidade dos dados
-- Quantidade de problemas encontrados
-
----
-
-## ⚠️ Identificação de problemas
-
-O usuário consegue visualizar uma tabela detalhada contendo:
-
-| Linha | Coluna | Problema | Valor |
-|---|---|---|---|
-| 15 | Idade | Valor ausente | - |
-| 28 | Nome | Espaços extras | " João " |
-| 42 | Cliente | Duplicado | Registro repetido |
-
-Essa etapa permite entender exatamente onde estão as inconsistências.
+- Distribuição de valores ausentes
+- Distribuição dos tipos de dados
 
 ---
 
 ## 🤖 Diagnóstico Executivo com IA
 
-Após a análise, o Aely utiliza Inteligência Artificial para gerar uma interpretação dos resultados.
-
-O relatório apresenta:
+Utilizando a API do Google Gemini, o sistema gera automaticamente um relatório contendo:
 
 - Situação geral da qualidade dos dados
 - Principais problemas encontrados
-- Impactos possíveis
+- Impactos para o negócio
 - Recomendações de melhoria
 
----
-
-## 📄 Exportação de relatórios
-
-A aplicação permite:
-
-- Exportar problemas encontrados em Excel
-- Gerar relatório executivo em PDF
+Caso o limite da API seja atingido, o sistema trata a exceção e informa o usuário sem interromper a aplicação.
 
 ---
 
-# 🏗️ Arquitetura do projeto
+## 📄 Exportação
 
-Fluxo da aplicação:
-          Upload CSV/XLSX
-                |
-                ↓
-        Leitura dos dados
-                |
-                ↓
-    Análise de qualidade (Pandas)
-                |
-                ↓
-   Identificação de inconsistências
-                |
-                ↓
-      Dashboard e indicadores
-                |
-                ↓
-      Diagnóstico executivo IA
-                |
-                ↓
-          Relatórios PDF
+É possível exportar:
+
+- Relatório de problemas em Excel
+- Relatório executivo em PDF
 
 ---
 
-# 🛠️ Tecnologias utilizadas
+# 🏗️ Fluxo da aplicação
 
-## Linguagem
+```text
+Upload CSV/XLSX
+        │
+        ▼
+Leitura da Base
+        │
+        ▼
+Análise de Qualidade
+        │
+        ▼
+Identificação de Problemas
+        │
+        ▼
+Dashboard Interativo
+        │
+        ▼
+Diagnóstico com IA
+        │
+        ▼
+Exportação dos Relatórios
+```
 
-- Python
+---
 
-## Manipulação e análise de dados
+# 🛠️ Tecnologias
 
-- Pandas
-
-## Interface
-
-- Streamlit
-
-## Visualização
-
-- Plotly
-
-## Arquivos
-
-- OpenPyXL
-
-## Inteligência Artificial
-
-- Google Gemini API
-
-## Relatórios
-
-- ReportLab
+| Tecnologia | Finalidade |
+|------------|------------|
+| Python | Desenvolvimento |
+| Pandas | Manipulação de dados |
+| Streamlit | Interface Web |
+| Plotly | Visualizações |
+| OpenPyXL | Exportação Excel |
+| ReportLab | Geração de PDF |
+| Google Gemini API | Diagnóstico Executivo |
 
 ---
 
 # 📁 Estrutura do projeto
-Aely-Data-Inspector/
 
+```text
+Aely-Data-Inspector/
 │
 ├── app.py
 ├── requirements.txt
@@ -156,76 +177,121 @@ Aely-Data-Inspector/
 ├── .env.example
 │
 ├── assets/
-│ └── style.css
+│   └── style.css
 │
 ├── utils/
-│ ├── analysis.py
-│ ├── ai.py
-│ ├── charts.py
-│ ├── export.py
-│ ├── pdf.py
-│ └── quality.py
+│   ├── analysis.py
+│   ├── ai.py
+│   ├── charts.py
+│   ├── export.py
+│   ├── pdf.py
+│   └── quality.py
 │
 └── screenshots/
-└── dashboard.png
+    ├── dashboard.png
+    ├── problems.png
+    └── report.png
+```
 
 ---
 
-# ⚙️ Como executar o projeto
+# ⚙️ Como executar
 
-## 1. Clone o repositório
+## Clone o projeto
 
 ```bash
 git clone https://github.com/luanamcrs/Aely-Data-Inspector.git
-2. Acesse a pasta
+```
+
+Entre na pasta:
+
+```bash
 cd Aely-Data-Inspector
-3. Crie um ambiente virtual
+```
+
+---
+
+## Crie um ambiente virtual
+
+```bash
 python -m venv .venv
+```
 
-Ative o ambiente:
+Windows
 
-Windows:
-
+```bash
 .venv\Scripts\activate
-4. Instale as dependências
+```
+
+Linux / macOS
+
+```bash
+source .venv/bin/activate
+```
+
+---
+
+## Instale as dependências
+
+```bash
 pip install -r requirements.txt
-5. Configure a API de IA
+```
 
-Crie um arquivo .env:
+---
 
+## Configure a API do Gemini
+
+Crie um arquivo `.env`
+
+```env
 GEMINI_API_KEY=sua_chave_aqui
-6. Execute a aplicação
+```
+
+---
+
+## Execute
+
+```bash
 streamlit run app.py
-🎯 Objetivos do projeto
+```
 
-Este projeto foi desenvolvido com foco em:
+---
 
-Data Quality
-Análise exploratória de dados
-Automação de processos analíticos
-Aplicação prática de Inteligência Artificial
-Construção de ferramentas para suporte à decisão
-📚 Aprendizados
+# 💡 Principais aprendizados
 
 Durante o desenvolvimento foram aplicados conceitos de:
 
-Manipulação de dados com Pandas
-Construção de dashboards interativos
-Organização de projetos Python
-Integração com APIs de IA
-Geração automática de relatórios
-Desenvolvimento de aplicações analíticas
-🔮 Próximas melhorias
+- Data Quality
+- Data Analysis
+- Pandas
+- Streamlit
+- Plotly
+- Organização de projetos Python
+- Consumo de APIs
+- Inteligência Artificial Generativa
+- Geração de relatórios em PDF
 
-Possíveis evoluções:
+---
 
-Conexão com bancos de dados
-Mais regras de validação de qualidade
-Histórico de análises
-Pipeline ETL automatizado
-Perguntas em linguagem natural sobre os dados
-👩‍💻 Autora
+# 🚀 Próximas melhorias
 
-Luana
+- Integração com bancos de dados
+- Histórico de análises
+- Novas regras de validação
+- Pipeline ETL
+- Perguntas em linguagem natural sobre a base
+- Deploy em nuvem
 
-Projeto desenvolvido como parte da minha jornada em Dados, Analytics e Inteligência Artificial.
+---
+
+# 👩‍💻 Autora
+
+**Luana Monteiro**
+
+Estudante de Tecnologia em Informática para Negócios, com foco em Dados, Analytics e Inteligência Artificial.
+
+Desenvolvi o **Aely Data Inspector** como projeto de portfólio para demonstrar conhecimentos em análise de dados, visualização, desenvolvimento de aplicações e integração com IA.
+
+---
+
+⭐ Se este projeto foi interessante para você, considere deixar uma estrela no repositório.
