@@ -421,7 +421,6 @@ try:
 
     if st.button(
         "Gerar Relatório IA",
-        use_container_width=True
     ):
 
 

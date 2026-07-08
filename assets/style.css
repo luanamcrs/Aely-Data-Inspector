@@ -3,20 +3,11 @@
    Dark Premium Theme
 ========================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-
-/* Fundo principal */
-
-.stApp {
-
-    background: #0E0E12;
-
-    color: #FFFFFF;
-
-}
-
 
 /* Fonte */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 
 html, body, [class*="css"] {
 
@@ -27,389 +18,893 @@ html, body, [class*="css"] {
 
 
 /* =========================
-   SIDEBAR
+   BACKGROUND PRINCIPAL
+========================= */
+
+
+.stApp {
+
+    background:
+
+    radial-gradient(
+        circle at top right,
+        rgba(255,143,177,0.10),
+        transparent 35%
+    ),
+
+    #050507;
+
+    color:#FFFFFF;
+
+}
+
+
+
+/* =========================
+   SIDEBAR GRADIENT ROSA
 ========================= */
 
 
 section[data-testid="stSidebar"] {
 
-    background: #15151D;
 
-    border-right: 1px solid #2A2A35;
+    background:
+
+    linear-gradient(
+        180deg,
+        #1A1018 0%,
+        #321629 40%,
+        #421D35 70%,
+        #0D0D10 100%
+    );
+
+
+    border-right:
+
+    1px solid rgba(255,143,177,0.25);
 
 }
+
+
+
+/* brilho superior sidebar */
+
+section[data-testid="stSidebar"]::before {
+
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:220px;
+
+
+    background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,143,177,.25),
+        transparent 70%
+    );
+
+
+}
+
+
+
+/* textos sidebar */
 
 
 section[data-testid="stSidebar"] * {
 
-    color: #FFFFFF !important;
+    color:#FFFFFF !important;
 
 }
 
-/* =========================
-   SIDEBAR ALIGNMENT
-========================= */
+
+
+/* centralização sidebar */
 
 
 section[data-testid="stSidebar"] h1,
 section[data-testid="stSidebar"] h2,
 section[data-testid="stSidebar"] h3 {
 
-    text-align: center;
+    text-align:center;
 
 }
+
 
 
 section[data-testid="stSidebar"] p {
 
-    text-align: center;
+    text-align:center;
 
 }
 
 
-/* Centraliza área do upload */
-
-section[data-testid="stSidebar"] [data-testid="stFileUploader"] {
-
-    text-align: center;
-
-}
-
-
-/* Centraliza botões */
-
-section[data-testid="stSidebar"] .stButton {
-
-    display: flex;
-
-    justify-content: center;
-
-}
-
-
-section[data-testid="stSidebar"] .stButton button {
-
-    width: 90%;
-
-}
-
-/* =========================
-   TEXTOS
-========================= */
 
 /* =========================
    TÍTULO PRINCIPAL AELY
 ========================= */
 
-/* =========================
-   TÍTULO PRINCIPAL AELY
-========================= */
+
+h1#aely-data-inspector {
+
+
+    width:100%;
+
+    text-align:center !important;
+
+
+    font-size:52px !important;
+
+
+    font-weight:800 !important;
+
+
+    letter-spacing:-2px;
+
+
+    margin-top:25px;
+
+
+}
+
+
+
+/* gradient branco + rosa */
+
 
 h1#aely-data-inspector > span:first-child {
-    background: linear-gradient(
+
+
+    background:
+
+    linear-gradient(
         90deg,
         #FFFFFF 0%,
         #FFFFFF 45%,
-        #FFB3C7 65%,
-        #FF8FB1 100%
-    ) !important;
-
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-
-    color: transparent !important;
-}
-
-/* Texto dentro do h1 */
-
-h1#aely-data-inspector span:first-child {
-
-    background: linear-gradient(
-        135deg,
-        #FFFFFF 20%,
+        #FFB3C7 55%,
         #FF8FB1 100%
     );
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 
-    filter: drop-shadow(
-        0 5px 15px rgba(255, 143, 177, 0.25)
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+
+
+    filter:
+
+    drop-shadow(
+        0 8px 20px rgba(255,143,177,.25)
     );
+
 
 }
 
 
-/* Remove o ícone de link do título */
+
+/* remove link do título */
+
 
 h1#aely-data-inspector [data-testid="stHeaderActionElements"] {
 
-    display: none;
+    display:none;
 
 }
 
+
+
 /* =========================
-   TÍTULO SIDEBAR
+   TÍTULO SIDEBAR AELY
 ========================= */
+
 
 section[data-testid="stSidebar"] h1 {
 
-    font-size: 37px !important;
-    font-weight: 800 !important;
-    letter-spacing: -1px;
 
-    text-align: center;
+    font-size:38px !important;
 
-    background: linear-gradient(
+
+    font-weight:800 !important;
+
+
+    letter-spacing:-1px;
+
+
+    text-align:center;
+
+
+    background:
+
+    linear-gradient(
         135deg,
         #FFFFFF,
         #FF8FB1
     );
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 
-    margin-bottom: 20px;
+    -webkit-background-clip:text;
 
-    filter: drop-shadow(0 4px 12px rgba(255, 143, 177, 0.25));
-
-}
+    -webkit-text-fill-color:transparent;
 
 
-h2 {
+    filter:
 
-    color: #FFFFFF !important;
+    drop-shadow(
+        0 5px 15px rgba(255,143,177,.25)
+    );
 
-    font-size: 24px !important;
-
-}
-
-
-h3 {
-
-    color: #FF8FB1 !important;
-
-}
-
-
-p {
-
-    color: #C7C7D1;
-
-}
-
-
-label {
-
-    color: #FFFFFF !important;
 
 }
 
 
 
 /* =========================
-   CARDS KPI
+   TEXTOS
+========================= */
+
+
+h2 {
+
+    color:#FFFFFF !important;
+
+    font-size:25px !important;
+
+}
+
+
+
+h3 {
+
+    color:#FF8FB1 !important;
+
+}
+
+
+
+p {
+
+    color:#C7C7D1;
+
+}
+
+
+
+label {
+
+    color:#FFFFFF !important;
+
+}
+
+/* =========================
+   KPI PREMIUM CARDS
 ========================= */
 
 
 .kpi-wrapper {
 
-    background: #17171F;
 
-    border: 1px solid #292936;
+    background:
 
-    border-radius: 18px;
+    linear-gradient(
+        145deg,
+        #121217,
+        #070709
+    );
 
-    padding: 22px;
 
-    transition: 0.3s;
+    border:
+
+    1px solid rgba(255,143,177,0.15);
+
+
+    border-radius:22px;
+
+
+    padding:26px;
+
+
+    min-height:130px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    transition:.35s ease;
+
 
 }
 
+
+
+/* brilho interno */
+
+.kpi-wrapper::before {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    top:-60px;
+
+
+    right:-60px;
+
+
+    width:160px;
+
+
+    height:160px;
+
+
+    background:
+
+
+    radial-gradient(
+        circle,
+        rgba(255,143,177,.22),
+        transparent 70%
+    );
+
+
+}
+
+
+
+/* hover */
 
 .kpi-wrapper:hover {
 
-    border-color: #FF8FB1;
 
-    transform: translateY(-3px);
+    transform:translateY(-5px);
+
+
+    border-color:#FF8FB1;
+
+
+    box-shadow:
+
+
+    0 15px 40px rgba(255,143,177,.18);
+
 
 }
 
+
+
+/* título KPI */
 
 
 .kpi-title {
 
-    color: #A8A8B3;
 
-    font-size: 14px;
+    color:#A8A8B5;
 
-    text-transform: uppercase;
 
-    letter-spacing: 1px;
+    font-size:13px;
+
+
+    font-weight:600;
+
+
+    letter-spacing:1.5px;
+
+
+    text-transform:uppercase;
+
 
 }
 
+
+
+/* valor KPI */
 
 
 .kpi-value {
 
-    color: #FFFFFF;
 
-    font-size: 36px;
+    margin-top:15px;
 
-    font-weight: 800;
 
-    margin-top: 12px;
+    font-size:42px;
+
+
+    font-weight:800;
+
+
+    background:
+
+
+    linear-gradient(
+        90deg,
+        #FFFFFF,
+        #FF8FB1
+    );
+
+
+    -webkit-background-clip:text;
+
+
+    -webkit-text-fill-color:transparent;
+
 
 }
+
+
+
+
 
 /* =========================
    BOTÕES
 ========================= */
 
+
 .stButton button {
-    background: #F8BBD0 !important;
-    color: #6B3A4A !important;
-    border: 1px solid #F3A8C2 !important;
-    border-radius: 14px;
-    padding: 10px 18px;
-    font-weight: 700;
-    font-size: 15px;
-    transition: all 0.25s ease;
-    box-shadow: 0 3px 8px rgba(248, 187, 208, 0.35);
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #F8BBD0,
+        #FF8FB1
+    ) !important;
+
+
+    color:#5E3042 !important;
+
+
+    border:none !important;
+
+
+    border-radius:14px;
+
+
+    padding:11px 22px;
+
+
+    font-weight:700;
+
+
+    font-size:15px;
+
+
+    transition:.3s ease;
+
+
+    box-shadow:
+
+
+    0 8px 20px rgba(255,143,177,.25);
+
+
 }
 
-/* Força o texto interno do botão */
+
+
+
+/* texto botão */
+
+
 .stButton button p,
 .stButton button span,
 .stButton button div {
-    color: #6B3A4A !important;
-    font-weight: 700 !important;
+
+
+    color:#5E3042 !important;
+
+
+    font-weight:700 !important;
+
+
 }
+
+
+
+
+/* hover botão */
 
 
 .stButton button:hover {
-    background: #F48FB1 !important;
-    border-color: #F48FB1 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(244, 143, 177, 0.45);
+
+
+    transform:translateY(-3px);
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #FF8FB1,
+        #FF6F9F
+    ) !important;
+
+
+    box-shadow:
+
+
+    0 12px 30px rgba(255,143,177,.45);
+
+
 }
+
 
 
 .stButton button:hover p,
 .stButton button:hover span,
 .stButton button:hover div {
-    color: #FFFFFF !important;
+
+
+    color:#FFFFFF !important;
+
+
 }
 
 
-.stButton button:active {
-    transform: translateY(0);
-}
+
+
 
 
 
 /* =========================
-   UPLOAD
+   UPLOAD PREMIUM
 ========================= */
+
 
 
 [data-testid="stFileUploader"] {
 
-    background: #17171F;
 
-    border-radius: 15px;
+    background:
 
-    border: 1px solid #292936;
 
-    padding: 12px;
+    linear-gradient(
+        145deg,
+        #121217,
+        #08080B
+    );
+
+
+    border-radius:20px;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.18);
+
+
+    padding:18px;
+
 
 }
+
+
+
+
+/* centralização uploader */
+
+
+[data-testid="stFileUploader"] {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+
+}
+
+
+
+
+
+[data-testid="stWidgetLabel"] {
+
+
+    width:100%;
+
+    text-align:center;
+
+
+}
+
+
+
+[data-testid="stWidgetLabel"] p {
+
+
+    text-align:center !important;
+
+    color:#FFD6E5 !important;
+
+    font-weight:700;
+
+
+}
+
+
+
+
+/* área interna */
+
+
+[data-testid="stFileUploaderDropzone"] {
+
+
+    display:flex !important;
+
+
+    flex-direction:column !important;
+
+
+    justify-content:center !important;
+
+
+    align-items:center !important;
+
+
+    min-height:220px;
+
+
+    width:100%;
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #171720,
+        #0D0D12
+    );
+
+
+    border-radius:16px;
+
+
+}
+
+
+
+
+/* botão upload */
+
+
+[data-testid="stFileUploaderDropzone"] button {
+
+
+    margin:auto !important;
+
+
+}
+
+
+
+
+/* texto formatos */
+
+
+[data-testid="stFileUploaderDropzoneInstructions"] {
+
+
+    width:100% !important;
+
+
+    text-align:center !important;
+
+
+    margin-top:15px;
+
+
+}
+
+
+
+[data-testid="stFileUploaderDropzoneInstructions"] span {
+
+
+    display:block;
+
+
+    text-align:center;
+
+
+    color:#BDBDC8 !important;
+
+
+}
+
+
+
+
+
+
 
 /* =========================
-   UPLOAD CENTRALIZADO
-========================= */
-
-[data-testid="stFileUploader"] section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-
-[data-testid="stFileUploader"] label {
-    justify-content: center !important;
-    text-align: center !important;
-}
-
-
-[data-testid="stFileUploader"] button {
-    margin: 10px auto !important;
-}
-
-
-[data-testid="stFileUploader"] small {
-    text-align: center !important;
-    display: block;
-}
-
-
-/* =========================
-   DATAFRAME
+   DATAFRAME PREMIUM
 ========================= */
 
 
 [data-testid="stDataFrame"] {
 
-    border-radius: 15px;
 
-    overflow: hidden;
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.15);
+
 
 }
 
 
 
+
+
+
 /* =========================
-   MÉTRICAS PADRÃO
+   MÉTRICAS STREAMLIT
 ========================= */
 
 
 [data-testid="stMetric"] {
 
-    background: #17171F;
 
-    border-radius: 18px;
+    background:
 
-    padding: 18px;
 
-    border: 1px solid #292936;
+    linear-gradient(
+        145deg,
+        #121217,
+        #08080B
+    );
+
+
+    border-radius:20px;
+
+
+    padding:20px;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.15);
+
 
 }
+
 
 
 [data-testid="stMetricValue"] {
 
-    color: #FF8FB1;
+
+    color:#FF8FB1;
+
 
 }
+
+/* =========================
+   GRÁFICOS PREMIUM
+========================= */
+
+
+[data-testid="stPlotlyChart"] {
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #111116,
+        #08080B
+    );
+
+
+    border-radius:22px;
+
+
+    padding:15px;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.15);
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+[data-testid="stPlotlyChart"]:hover {
+
+
+    border-color:rgba(255,143,177,.45);
+
+
+    box-shadow:
+
+
+    0 12px 35px rgba(255,143,177,.12);
+
+
+}
+
+
 
 
 
 /* =========================
-   ALERTAS
+   ALERTAS CUSTOMIZADOS
 ========================= */
+
 
 
 .stAlert {
 
-    background: #992a41;
 
-    border-radius: 15px;
+    background:
 
-    border: 1px solid #FFFFFF;
+
+    linear-gradient(
+        145deg,
+        #15151D,
+        #0D0D12
+    ) !important;
+
+
+    border-radius:18px;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.25);
+
 
 }
+
+
+
+
+
+/* sucesso */
+
+
+div[data-testid="stAlert"] p {
+
+
+    color:#FFFFFF !important;
+
+
+}
+
+
 
 
 
@@ -420,57 +915,445 @@ label {
 
 hr {
 
-    border-color: #292936;
+
+    border-color:#292936;
+
+
+    opacity:.6;
+
+
+}
+
+
+
+
+
+/* =========================
+   SUBTÍTULOS DAS SEÇÕES
+========================= */
+
+
+.stMarkdown h2 {
+
+
+    margin-top:35px;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.stMarkdown h3 {
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+/* =========================
+   CONTAINERS STREAMLIT
+========================= */
+
+
+div[data-testid="stVerticalBlock"] {
+
+
+    gap:1rem;
+
+
+}
+
+
+
+
+
+/* =========================
+   REMOVE ELEMENTOS STREAMLIT
+========================= */
+
+
+/* Header */
+
+header[data-testid="stHeader"] {
+
+
+    background:transparent;
+
+
+}
+
+
+
+/* Menu */
+
+#MainMenu {
+
+
+    visibility:hidden;
+
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+
+    visibility:hidden;
+
+
+}
+
+
+
+
+
+/* =========================
+   SCROLLBAR PREMIUM
+========================= */
+
+
+
+::-webkit-scrollbar {
+
+
+    width:8px;
+
+
+}
+
+
+
+::-webkit-scrollbar-track {
+
+
+    background:#08080B;
+
+
+}
+
+
+
+::-webkit-scrollbar-thumb {
+
+
+    background:#FF8FB1;
+
+
+    border-radius:20px;
+
+
+}
+
+
+
+
+/* =========================
+   BOTÃO DOWNLOAD
+========================= */
+
+
+.stDownloadButton button {
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #15151D,
+        #242430
+    ) !important;
+
+
+    color:#FFB3C7 !important;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.35) !important;
+
+
+}
+
+
+
+
+.stDownloadButton button:hover {
+
+
+    background:
+
+
+    linear-gradient(
+        135deg,
+        #FF8FB1,
+        #FF6F9F
+    ) !important;
+
+
+    color:white !important;
+
+
+}
+
+
+
+
+
+/* =========================
+   EMPTY STATE INICIAL
+========================= */
+
+
+.stInfo {
+
+
+    background:
+
+
+    linear-gradient(
+        145deg,
+        #121217,
+        #08080B
+    ) !important;
+
+
+    border-radius:20px;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.20);
+
+
+}
+
+
+
+
+/* =========================
+   SOMBRA GERAL PREMIUM
+========================= */
+
+
+.block-container {
+
+
+    padding-top:2rem;
+
+
+    padding-bottom:3rem;
+
+
+}
+
+
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+
+@media(max-width:768px){
+
+
+    h1#aely-data-inspector {
+
+
+        font-size:38px !important;
+
+
+    }
+
+
+    .kpi-value {
+
+
+        font-size:32px;
+
+
+    }
+
 
 }
 
 /* =========================
-   STREAMLIT CLEAN MODE
+   ALERTS PREMIUM AELY
 ========================= */
 
 
-/* Remove header superior */
+/* Container externo */
 
-header[data-testid="stHeader"] {
+[data-testid="stAlert"] {
 
-    background: transparent;
+    border-radius:18px !important;
 
-}
-
-
-/* Remove menu */
-
-#MainMenu {
-
-    visibility: hidden;
-
-}
-
-
-/* Remove rodapé */
-
-footer {
-
-    visibility: hidden;
+    overflow:hidden !important;
 
 }
 
 
 
-/* Fundo mais preto */
+/* INFO */
 
-.stApp {
+[data-testid="stAlert"][data-baseweb="notification"] {
 
-    background: #080808;
+    background:
+
+    linear-gradient(
+        145deg,
+        #17131A,
+        #0B0B10
+    ) !important;
+
+
+    border:
+
+    1px solid rgba(255,143,177,.35) !important;
+
 
 }
 
 
 
-/* Sidebar */
+/* Remove fundo azul interno */
 
-section[data-testid="stSidebar"] {
+[data-testid="stAlert"] > div {
 
-    background: #111111;
+    background:transparent !important;
 
 }
+
+
+
+/* Texto */
+
+[data-testid="stAlert"] p {
+
+    color:#FFFFFF !important;
+
+}
+
+
+
+/* Ícone */
+
+[data-testid="stAlert"] svg {
+
+    color:#FF8FB1 !important;
+
+}
+
+/* =========================
+   CENTRALIZA TÍTULOS DAS SEÇÕES
+========================= */
+
+
+/* Títulos principais das seções */
+
+h2,
+h3 {
+
+    text-align:center !important;
+
+}
+
+
+/* Títulos criados pelo Streamlit */
+
+.stMarkdown h2,
+.stMarkdown h3 {
+
+    text-align:center !important;
+
+}
+
+
+
+/* Espaçamento para ficar mais elegante */
+
+.stMarkdown h2 {
+
+    margin-top:35px !important;
+
+    margin-bottom:25px !important;
+
+    font-weight:700 !important;
+
+}
+
+
+
+.stMarkdown h3 {
+
+    margin-top:25px !important;
+
+    margin-bottom:20px !important;
+
+}
+
+/* =========================
+   PLOTLY PREMIUM CONTAINER
+========================= */
+
+
+[data-testid="stPlotlyChart"] {
+
+    background: transparent !important;
+
+    border-radius:24px;
+
+    padding:0 !important;
+
+}
+
+
+
+/* Container interno do gráfico */
+
+[data-testid="stPlotlyChart"] > div {
+
+    background:
+
+    linear-gradient(
+        145deg,
+        #111116,
+        #08080B
+    ) !important;
+
+
+    border-radius:24px;
+
+
+    border:
+
+    1px solid rgba(244,167,199,.18);
+
+
+    padding:15px;
+
+
+}
+
+
+
+/* Remove espaço extra em volta */
+
+[data-testid="stPlotlyChart"] iframe {
+
+    border-radius:20px;
+
+}
+
