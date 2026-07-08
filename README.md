@@ -1,4 +1,3 @@
-<img width="1897" height="910" alt="Captura de tela 2026-07-07 224504" src="https://github.com/user-attachments/assets/5cd14099-142a-4c52-b8f5-5faf7cf73091" />
 # 📊 Aely Data Inspector
 
 <p align="center">
@@ -28,20 +27,19 @@ Analise arquivos CSV e Excel, identifique inconsistências automaticamente, visu
 
 ## Home
 
-![Home](screenshots/home.png)
+<img width="1897" height="910" alt="Captura de tela 2026-07-07 224504" src="https://github.com/user-attachments/assets/5cd14099-142a-4c52-b8f5-5faf7cf73091" />
 
 ## Dashboard
 
-![Dashboard](screenshots/dashboard.png)
+<img width="1920" height="921" alt="Captura de tela 2026-07-07 232717" src="https://github.com/user-attachments/assets/9d04dc12-22f8-416f-98dd-6d4e3a19bafb" />
 
 ## Análise de Problemas
 
-![Problemas](screenshots/IdentificaErros.png)
+<img width="1920" height="925" alt="Captura de tela 2026-07-07 225234" src="https://github.com/user-attachments/assets/6b1e2dad-511a-4ab5-8247-b0158f465498" />
 
 ## Relatório Executivo
 
-![Relatório](screenshots/ia.png)
-
+<img width="1920" height="912" alt="Captura de tela 2026-07-07 225252" src="https://github.com/user-attachments/assets/963c89b9-18d7-40eb-a62d-ea74ff63ef59" />
 ---
 
 # 🎯 Sobre o projeto
