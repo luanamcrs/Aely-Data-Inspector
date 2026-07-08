@@ -1,0 +1,476 @@
+/* =========================
+   AELY DATA INSPECTOR
+   Dark Premium Theme
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Fundo principal */
+
+.stApp {
+
+    background: #0E0E12;
+
+    color: #FFFFFF;
+
+}
+
+
+/* Fonte */
+
+html, body, [class*="css"] {
+
+    font-family: "Inter", sans-serif;
+
+}
+
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+
+section[data-testid="stSidebar"] {
+
+    background: #15151D;
+
+    border-right: 1px solid #2A2A35;
+
+}
+
+
+section[data-testid="stSidebar"] * {
+
+    color: #FFFFFF !important;
+
+}
+
+/* =========================
+   SIDEBAR ALIGNMENT
+========================= */
+
+
+section[data-testid="stSidebar"] h1,
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+
+    text-align: center;
+
+}
+
+
+section[data-testid="stSidebar"] p {
+
+    text-align: center;
+
+}
+
+
+/* Centraliza área do upload */
+
+section[data-testid="stSidebar"] [data-testid="stFileUploader"] {
+
+    text-align: center;
+
+}
+
+
+/* Centraliza botões */
+
+section[data-testid="stSidebar"] .stButton {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+section[data-testid="stSidebar"] .stButton button {
+
+    width: 90%;
+
+}
+
+/* =========================
+   TEXTOS
+========================= */
+
+/* =========================
+   TÍTULO PRINCIPAL AELY
+========================= */
+
+/* =========================
+   TÍTULO PRINCIPAL AELY
+========================= */
+
+h1#aely-data-inspector > span:first-child {
+    background: linear-gradient(
+        90deg,
+        #FFFFFF 0%,
+        #FFFFFF 45%,
+        #FFB3C7 65%,
+        #FF8FB1 100%
+    ) !important;
+
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+
+    color: transparent !important;
+}
+
+/* Texto dentro do h1 */
+
+h1#aely-data-inspector span:first-child {
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF 20%,
+        #FF8FB1 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    filter: drop-shadow(
+        0 5px 15px rgba(255, 143, 177, 0.25)
+    );
+
+}
+
+
+/* Remove o ícone de link do título */
+
+h1#aely-data-inspector [data-testid="stHeaderActionElements"] {
+
+    display: none;
+
+}
+
+/* =========================
+   TÍTULO SIDEBAR
+========================= */
+
+section[data-testid="stSidebar"] h1 {
+
+    font-size: 37px !important;
+    font-weight: 800 !important;
+    letter-spacing: -1px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #FFFFFF,
+        #FF8FB1
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 20px;
+
+    filter: drop-shadow(0 4px 12px rgba(255, 143, 177, 0.25));
+
+}
+
+
+h2 {
+
+    color: #FFFFFF !important;
+
+    font-size: 24px !important;
+
+}
+
+
+h3 {
+
+    color: #FF8FB1 !important;
+
+}
+
+
+p {
+
+    color: #C7C7D1;
+
+}
+
+
+label {
+
+    color: #FFFFFF !important;
+
+}
+
+
+
+/* =========================
+   CARDS KPI
+========================= */
+
+
+.kpi-wrapper {
+
+    background: #17171F;
+
+    border: 1px solid #292936;
+
+    border-radius: 18px;
+
+    padding: 22px;
+
+    transition: 0.3s;
+
+}
+
+
+.kpi-wrapper:hover {
+
+    border-color: #FF8FB1;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+.kpi-title {
+
+    color: #A8A8B3;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+
+
+.kpi-value {
+
+    color: #FFFFFF;
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    margin-top: 12px;
+
+}
+
+/* =========================
+   BOTÕES
+========================= */
+
+.stButton button {
+    background: #F8BBD0 !important;
+    color: #6B3A4A !important;
+    border: 1px solid #F3A8C2 !important;
+    border-radius: 14px;
+    padding: 10px 18px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.25s ease;
+    box-shadow: 0 3px 8px rgba(248, 187, 208, 0.35);
+}
+
+/* Força o texto interno do botão */
+.stButton button p,
+.stButton button span,
+.stButton button div {
+    color: #6B3A4A !important;
+    font-weight: 700 !important;
+}
+
+
+.stButton button:hover {
+    background: #F48FB1 !important;
+    border-color: #F48FB1 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(244, 143, 177, 0.45);
+}
+
+
+.stButton button:hover p,
+.stButton button:hover span,
+.stButton button:hover div {
+    color: #FFFFFF !important;
+}
+
+
+.stButton button:active {
+    transform: translateY(0);
+}
+
+
+
+/* =========================
+   UPLOAD
+========================= */
+
+
+[data-testid="stFileUploader"] {
+
+    background: #17171F;
+
+    border-radius: 15px;
+
+    border: 1px solid #292936;
+
+    padding: 12px;
+
+}
+
+/* =========================
+   UPLOAD CENTRALIZADO
+========================= */
+
+[data-testid="stFileUploader"] section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+[data-testid="stFileUploader"] label {
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+
+[data-testid="stFileUploader"] button {
+    margin: 10px auto !important;
+}
+
+
+[data-testid="stFileUploader"] small {
+    text-align: center !important;
+    display: block;
+}
+
+
+/* =========================
+   DATAFRAME
+========================= */
+
+
+[data-testid="stDataFrame"] {
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+
+/* =========================
+   MÉTRICAS PADRÃO
+========================= */
+
+
+[data-testid="stMetric"] {
+
+    background: #17171F;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    border: 1px solid #292936;
+
+}
+
+
+[data-testid="stMetricValue"] {
+
+    color: #FF8FB1;
+
+}
+
+
+
+/* =========================
+   ALERTAS
+========================= */
+
+
+.stAlert {
+
+    background: #992a41;
+
+    border-radius: 15px;
+
+    border: 1px solid #FFFFFF;
+
+}
+
+
+
+/* =========================
+   DIVISORES
+========================= */
+
+
+hr {
+
+    border-color: #292936;
+
+}
+
+/* =========================
+   STREAMLIT CLEAN MODE
+========================= */
+
+
+/* Remove header superior */
+
+header[data-testid="stHeader"] {
+
+    background: transparent;
+
+}
+
+
+/* Remove menu */
+
+#MainMenu {
+
+    visibility: hidden;
+
+}
+
+
+/* Remove rodapé */
+
+footer {
+
+    visibility: hidden;
+
+}
+
+
+
+/* Fundo mais preto */
+
+.stApp {
+
+    background: #080808;
+
+}
+
+
+
+/* Sidebar */
+
+section[data-testid="stSidebar"] {
+
+    background: #111111;
+
+}

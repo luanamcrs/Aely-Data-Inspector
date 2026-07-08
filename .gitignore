@@ -1,5 +1,26 @@
+# Ambiente virtual
+venv/
+env/
 .venv/
+
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+
+# Streamlit
+.streamlit/
+
+# Variáveis de ambiente
 .env
-reports/*.pdf
+
+# Arquivos gerados
+*.xlsx
+*.csv
+*.pdf
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
